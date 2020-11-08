@@ -1,0 +1,31 @@
+question: 
+Is there a next step of interview about your company?
+What the technology stack you use in this full-stack position.
+I saw you use IAM. I don’t know much about IAM, can you please explain it for me?
+
+
+Personal Project Management Tool:
+Spring boot,back-end
+reactJS/Redux, front-end
+
+CRUD for project and task
+task 3 priority: high, medium, low
+task 3 status: To do, In progress, Have done
+
+
+
+Penguin platform website:
+JDBC, back-end
+JSP, front-end
+
+we have 3 status to login, Users, Researchers, Administrators.
+The priority is low-medium-high.
+Users can comment for each pictures.
+Researchers can upload the pictures and the sites folders. They could only do CRUD operations to their own pictures and sites, and their comments.
+Administrators can do CRUD to all the sites, pictures, and comments.
+
+
+
+job:
+I have a template example of the web, and I fill the content of that AI
+

@@ -1,0 +1,38 @@
+
+sudo /usr/local/MySQL/support-files/mysql.server start
+sudo /usr/local/MySQL/support-files/mysql.server stop
+sudo /usr/local/MySQL/support-files/mysql.server restart
+
+/usr/local/mysql/bin/mysql -u root -p
+在terminal里开启mysql
+show variables like 'datadir';
+show variables like '%secure%';
+show variables like '%char%';
+exit;
+
+
+etc里放my.cnf
+cd /etc  
+sudo vim my.cnf
+
+
+[mysqld]
+port=3306
+character-set-server=utf8
+[mysql]
+default-character-set=utf8
+[mysqld]
+secure-file-priv=
+[mysql]
+local-infile=1
+[mysqld]
+local-infile=1
+
+
+error 13:
+##sudo chown -R _mysql:admin /usr/local/mysql/data/
+load csv只能从tmp里
+/private/tmp/
+
+
+

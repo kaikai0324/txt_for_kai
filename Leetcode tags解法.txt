@@ -1,0 +1,16 @@
+
+leetcode tags solution
+Kai he
+https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP
+
+1. Sliding Windows
+
+Time complexity of brute force will be O(N*K)
+
+嵌套循环，定义arr[start]与arr[end]，两个循环sum += arr[end]，sum -= arr[start]
+
+Time Complexity #
+The time complexity of the Sliding Windows algorithm will be O(N).
+Space Complexity #
+The algorithm runs in constant space O(1).
+

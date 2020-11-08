@@ -1,0 +1,19 @@
+git clone -b branchx https://github.com/AgileIntelligence/AgileIntPPMTool.git
+
+
+git update-index --assume-unchanged ppmtool-react-client/package.json
+git update-index --assume-unchanged ppmtool-react-client/package-lock.json
+
+git pull origin branch15
+
+
+在intellij里：
+Import maven
+Springboot start
+
+
+
+
+在vscode里：
+复制node_modules或者 npm install
+npm i redux react-redux redux-thunk

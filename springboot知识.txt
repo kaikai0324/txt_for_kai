@@ -1,0 +1,34 @@
+
+
+1、domain知识（如Project.java）
+@Id // 主键
+@GeneratedValue(strategy = GenerationType.IDENTITY) // 自增长策略
+
+@Column(nullable = false) // 映射为字段，值不能为空
+
+FetchType.LAZY：懒加载，加载一个实体时，定义懒加载的属性不会马上从数据库中加载。
+FetchType.EAGER：急加载，加载一个实体时，定义急加载的属性会立即从数据库中加载。
+比方User类有两个属性，name跟address，就像百度知道，登录后用户名是需要显示出来的，此属性用到的几率极大，要马上到数据库查，用急加载；
+而用户地址大多数情况下不需要显示出来，只有在查看用户资料是才需要显示，需要用了才查数据库，用懒加载就好了。所以，并不是一登录就把用户
+的所有资料都加载到对象中，于是有了这两种加载模式。
+
+@OneToMany(mappedBy = "author",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    //级联保存、更新、删除、刷新;延迟加载。当删除用户，会级联删除该用户的所有文章
+    //拥有mappedBy注解的实体类为关系被维护端
+     //mappedBy="author"中的author是Article中的author属性
+@ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},optional=false)//可选属性optional=false,表示author不能为空。删除文章，不影响用户
+    @JoinColumn(name="author_id")//设置在article表中的关联字段(外键)
+
+
+2、web(如ProjectController)
+@PostMapping(value = "/user/login") == @RequestMapping(value = "/user/login",method = RequestMethod.POST)
+RESTful API:
+@GetMapping，处理get请求
+@PostMapping，处理post请求
+@PutMapping，处理put请求
+@DeleteMapping，处理delete请求
+
+@PathVaribale 获取url中的数据
+@RequestParam 获取请求参数的值
+使用@RequestParam时，URL是这样的：http://host:port/path?参数名=参数值
+使用@PathVariable时，URL是这样的：http://host:port/path/参数值
